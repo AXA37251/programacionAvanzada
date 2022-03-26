@@ -13,7 +13,7 @@ class Juego{
         Juego(string, TipoGenero);
         void setNombre(string);
         void setGenero(TipoGenero);
-        string getNombre;
+        string getNombre();
         TipoGenero getTipoGenero();
         ~Juego();
 };

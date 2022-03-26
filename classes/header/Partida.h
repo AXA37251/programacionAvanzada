@@ -1,9 +1,7 @@
 #ifndef PARTIDA
 #define PARTIDA
 #include"../../datatypes/header/DtFechaHora.h"
-
 using namespace std;
-
 class Partida  {
     private:
         DtFechaHora fecha;

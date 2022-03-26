@@ -1,10 +1,14 @@
 #ifndef DTPARTIDAINDIVIDUAL
 #define DTPARTIDAINDIVIDUAL
-#include"../../classes/header/Partida.h"
+#include"DtPartida.h"
 
-class DtPartidaIndividual:Partida{
+class DtPartidaIndividual:DtPartida {
     private:
         bool continuaPartidaAnterior;
     public:
+        DtPartidaIndividual();
+        DtPartidaIndividual(DtFechaHora fecha, int duracion, bool continuaPartidaAnterior);
+        bool getContinuaPartidaAnterior();
+        ~DtPartidaIndividual();
 };
 #endif
