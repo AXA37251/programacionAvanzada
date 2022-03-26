@@ -20,3 +20,4 @@ class Partida  {
         virtual void darTotalHorasParticipantes()=0;
 };
 #endif
+
