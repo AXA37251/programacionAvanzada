@@ -2,7 +2,9 @@
 #define DTPARTIDA
 #include"DtFechaHora.h"
 
-class DtPartida {
+using namespace std;
+
+class DtPartida{
     private:
         DtFechaHora fecha;
         int duracion;
@@ -11,6 +13,7 @@ class DtPartida {
         DtPartida(DtFechaHora, int);
         DtFechaHora getFecha();
         int getDuracion();
+        
         ~DtPartida();
 };
 #endif

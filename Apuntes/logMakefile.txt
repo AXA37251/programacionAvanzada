@@ -1,0 +1,79 @@
+#Log de desarrolo del Make:
+
+#*-//v.1--------------------------------*
+#|Makefile clásico						|
+#|	Lógica del Makefile					|
+#|		objetivo: dependencia			|
+#|		    instrucción					|
+#|--------------------------------------|
+#|programa: DtFecha.o main.o  			|
+#|	g++ DtFecha.o main.o -g -o programa	|  
+#|main.o: main.cpp 						|
+#|	g++ main.cpp -g -c 					|
+#|DtFecha.o: DtFecha.cpp 				|
+#|	g++ DtFecha.cpp -g -c 				|
+#|clean: 								|
+#|	rm -rf *.o programa 				|
+#*--------------------------------------*
+
+#*-//v.2--------------------------------*
+#|Makefile Aplicando variables			|
+#|--------------------------------------|
+#|OBJS = main.o DtFecha.o				|
+#|BINARIO = programa					|
+#|programa: $(OBJS) 					|
+#|	g++ $(OBJS) -g -o $(BINARIO)  		|
+#|main.o: main.cpp 						|
+#|	g++ main.cpp -g -c 					|
+#|DtFecha.o: DtFecha.cpp 				|
+#|	g++ DtFecha.cpp -g -c 				|
+#|clean: 								|
+#|	rm -rf $(OBJS) $(BINARIO)  			|
+#*--------------------------------------*
+
+#*-//v.3--------------------------------*
+#|#Según la documentación (10.2) de Make|
+#|el programa reconoce algunos idiomas y| 
+#|asume las reglas estandar de compilado|
+#|Podría bien utilizarse un make asi:	|
+#|--------------------------------------|
+#|confirmado							|
+#|--------------------------------------|
+#|programa: $(OBJS)  					|
+#|	g++ DtFecha.o main.o -g -o programa	|  
+#|main.o: main.cpp 						|
+#|	     #(vacio)						|
+#|DtFecha.o: DtFecha.cpp 				|
+#|	     #(vacio)						|
+#|clean: 								|
+#|	rm -rf *.o programa 				|
+#*--------------------------------------*
+
+#*-//v.4--------------------------------*
+#|Patrones:								| 
+#|Otra de las cosas que ofrece Make es	|
+#|la posibilidad de usar patrones para	|
+#|reducir la sintaxis, ejemplo:			|
+#|--------------------------------------|
+#|confirmado							|
+#|--------------------------------------|
+#|programa: $(OBJS)  					|
+#|	g++ DtFecha.o main.o -g -o programa	|  
+#|%.o: %.c 								|
+#|clean: 								|
+#|	rm -rf *.o programa 				|
+#*--------------------------------------*
+
+#*-//v.5--------------------------------*
+#|"Carpetización"						|
+#|Permite organizar en directorios		|
+#|En este caso tendremos que utilizar	|
+#|La directiva: "include"				|
+#|--------------------------------------|
+#|programa: $(OBJS) 					|
+#|	g++ DtFecha.o main.o -g -o programa	|  
+#|main.o: main.cpp 						|
+#|DtFecha.o: DtFecha.cpp 				|
+#|clean: 								|
+#|	rm -rf *.o programa 				|
+#*--------------------------------------*

@@ -1,4 +1,6 @@
+
 #include"header/PartidaIndividual.h"
+
 PartidaIndividual::PartidaIndividual(){}
 PartidaIndividual::PartidaIndividual(DtFechaHora fecha, int duracion, bool continuaPartidaAnterior):Partida(fecha, duracion){
     this->continuaPartidaAnterior=continuaPartidaAnterior;
@@ -9,11 +11,29 @@ void PartidaIndividual::darTotalHorasParticipantes(int duracion){
 void PartidaIndividual::setContinuarPartidaAnterior(bool continuaPartidaAnterior){
     this->continuaPartidaAnterior=continuaPartidaAnterior;
 }
-int PartidaIndividual::getDarTotalHorasParticipantes(){
-    cout << "devuelve las horas de juego del jugador" << endl;
-}
 bool PartidaIndividual::getContinuarPartidaAnterior(){
     return this->continuaPartidaAnterior;
 }
 PartidaIndividual::~PartidaIndividual(){}
+
+/*
+#include "header/PartidaIndividual.h"
+
+        PartidaIndividual::PartidaIndividual(){}
+        PartidaIndividual::PartidaIndividual(DtFechaHora fecha,int duracion,bool continuarPartidaAnterior):Partida(fecha,duracion){
+            this->continuarPartidaAnterior=continuarPartidaAnterior;
+        }
+        bool PartidaIndividual::getContinuarPartidaAnterior(){
+            return this->continuarPartidaAnterior;
+        }
+        void PartidaIndividual::setContinuarPartidaAnterior(bool continuarPartidaAnterior){
+            this->continuarPartidaAnterior=continuarPartidaAnterior;
+        }
+        PartidaIndividual::~PartidaIndividual(){}
+        
+        void PartidaIndividual::darTotalHorasParticipantes(){
+            cout<<"devuelve las horas"<<endl;
+        }
+*/
+
 

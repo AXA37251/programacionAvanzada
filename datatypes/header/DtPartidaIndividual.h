@@ -2,7 +2,7 @@
 #define DTPARTIDAINDIVIDUAL
 #include"DtPartida.h"
 
-class DtPartidaIndividual:DtPartida {
+class DtPartidaIndividual: public DtPartida {
     private:
         bool continuaPartidaAnterior;
     public:

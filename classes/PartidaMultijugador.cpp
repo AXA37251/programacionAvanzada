@@ -21,3 +21,30 @@ void PartidaMultijugador::darTotalHorasParticipantes(int totalHorasParticipantes
     cout << "agrega horas de juego a los participantes" << endl;
 }
 PartidaMultijugador::~PartidaMultijugador(){}
+
+/*
+#include "header/PartidaMultijugador.h"
+
+
+    PartidaMultijugador::PartidaMultijugador(){}
+    PartidaMultijugador::PartidaMultijugador(DtFechaHora fecha,int duracion,bool trasmicionEnVivo):Partida(fecha,duracion){
+        this->trasmicionEnVivo=trasmicionEnVivo;
+    }
+    bool PartidaMultijugador::getTrasmicionEnVivo(){
+        return this->trasmicionEnVivo;
+    }
+    void PartidaMultijugador::setTrasmicionEnVivo(bool trasmicionEnVivo){
+        this->trasmicionEnVivo=trasmicionEnVivo;
+    }
+
+    PartidaMultijugador::~PartidaMultijugador(){}
+    
+    
+    void PartidaMultijugador::darTotalHorasParticipantes(){
+        cout << "Devuelve total de horas de los jugadores" << endl;
+    }
+*/  
+
+
+
+

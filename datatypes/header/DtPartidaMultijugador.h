@@ -2,14 +2,15 @@
 #define DTPARTIDAMULTIJUGADOR
 #include"DtPartida.h"
 
-class DtPartidaMultijugador:DtPartida {
+class DtPartidaMultijugador: public DtPartida {
     private:
         bool trasmitidaEnVivo;
-        int cantParticipantes;
+        /*int cantParticipantes;*/
     public:
         DtPartidaMultijugador();
         DtPartidaMultijugador(DtFechaHora, int, bool, int);
         bool getTrasmitidaEnVivo();
-        int getCantParticipantes();
+        /*int getCantParticipantes();*/
+        ~DtPartidaMultijugador();
 };
 #endif
