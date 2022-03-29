@@ -8,7 +8,7 @@ class DtPartidaMultijugador: public DtPartida {
         /*int cantParticipantes;*/
     public:
         DtPartidaMultijugador();
-        DtPartidaMultijugador(DtFechaHora, int, bool, int);
+        DtPartidaMultijugador(DtFechaHora*, int, bool, int);
         bool getTrasmitidaEnVivo();
         /*int getCantParticipantes();*/
         ~DtPartidaMultijugador();

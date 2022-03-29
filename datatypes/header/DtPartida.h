@@ -6,12 +6,12 @@ using namespace std;
 
 class DtPartida{
     private:
-        DtFechaHora fecha;
+        DtFechaHora* fecha;
         int duracion;
     public:
         DtPartida();
-        DtPartida(DtFechaHora, int);
-        DtFechaHora getFecha();
+        DtPartida(DtFechaHora*, int);
+        DtFechaHora* getFecha();
         int getDuracion();
         
         ~DtPartida();

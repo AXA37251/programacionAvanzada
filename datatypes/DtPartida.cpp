@@ -1,11 +1,11 @@
 #include"header/DtPartida.h"
 
 DtPartida::DtPartida(){}
-DtPartida::DtPartida(DtFechaHora fecha, int duracion){
+DtPartida::DtPartida(DtFechaHora* fecha, int duracion){
     this->fecha=fecha;
     this->duracion=duracion;
 }
-DtFechaHora DtPartida::getFecha(){
+DtFechaHora* DtPartida::getFecha(){
     return this->fecha;
 }
 int DtPartida::getDuracion(){

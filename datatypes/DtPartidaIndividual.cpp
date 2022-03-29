@@ -1,7 +1,7 @@
 #include"header/DtPartidaIndividual.h"
 
 DtPartidaIndividual::DtPartidaIndividual(){}
-DtPartidaIndividual::DtPartidaIndividual(DtFechaHora fecha, int duracion, bool continuaPartidaAnterior):DtPartida(fecha, duracion){
+DtPartidaIndividual::DtPartidaIndividual(DtFechaHora* fecha, int duracion, bool continuaPartidaAnterior):DtPartida(fecha, duracion){
     this->continuaPartidaAnterior=continuaPartidaAnterior;
 }
 bool DtPartidaIndividual::getContinuaPartidaAnterior(){
