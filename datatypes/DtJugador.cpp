@@ -11,4 +11,8 @@ string DtJugador::getNickname(){
 int DtJugador::getEdad(){
     return this->edad;
 }
+ostream& operator << (ostream& salida, DtJugador& jugador){
+    cout<<"Nombre: "<<jugador.nickname<<"\t\tEdad: "<<jugador.edad<<endl;
+    return salida;
+}
 DtJugador::~DtJugador(){}  

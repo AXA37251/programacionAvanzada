@@ -21,6 +21,7 @@ class DtFechaHora   {
         int getHora();
         int getMin();
         ~DtFechaHora();
+        
         friend ostream& operator << (ostream&, DtFechaHora&);
 };
 #endif

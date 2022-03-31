@@ -1,22 +1,26 @@
 #ifndef PARTIDA
 #define PARTIDA
 #include"../../datatypes/header/DtFechaHora.h"
+#include"Jugador.h"
 
 using namespace std;
 
 class Partida{
     private:
-        DtFechaHora fecha;
+        DtFechaHora* fecha;
         int duracion;
+        Jugador* jugador;
     public:
         Partida();
-        Partida(DtFechaHora fecha, int duracion);
-        void setFecha(DtFechaHora);
+        Partida(DtFechaHora* fecha, int duracion, Jugador* jugador);
+        void setFecha(DtFechaHora*);
         void setDuracion(int duracion);
-        DtFechaHora getFecha();
+        DtFechaHora* getFecha();
         int getDuracion();
         ~Partida();
         //Abstract
-        virtual void darTotalHorasParticipantes()=0;
+        virtual int darTotalHorasParticipantes()=0;
+        Jugador* getJugador();
+
 };
 #endif
